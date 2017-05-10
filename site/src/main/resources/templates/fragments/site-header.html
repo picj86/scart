@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1" />
+
+</head>
+<body>
+	<header th:fragment="site-header">
+		<!-- header Area Start -->
+		<div class="header_top">
+			<div class="container">
+				<div class="header_top-box">
+					<div class="header-top-left">
+						<div class="box1 cssmenu">
+							<ul>
+								<li><a href="#" class="fa fa-facebook"></a></li>
+								<li><a href="#" class="fa fa-google-plus"></a></li>
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-pinterest"></a></li>
+								<li><a href="#" class="fa fa-youtube"></a></li>
+							</ul>
+						</div>
+						<div class="cssmenu">
+							<ul>
+								<li class="active"><a href="login.html">Mobile Recharge</a></li>
+								<li class="active"><a href="login.html">Freebie</a></li>
+								<li class="active"><a href="login.html">Books</a></li>
+								<li class="active"><a href="login.html">Offers</a></li>
+								<li class="active"><a href="login.html">Daily Deals</a></li>
+							</ul>
+						
+						</div>
+					</div>
+
+
+					<div class="cssmenu">
+						<ul>
+							<li  sec:authorize="${isAuthenticated()}"><a href="#" th:href="@{/myAccount}">Account</a></li>
+							<li sec:authorize="${isAuthenticated()}"><a href="wishlist.html">Wishlist</a></li>
+							<li sec:authorize="${!isAuthenticated()}" class="active"><a href="#" th:href="@{/login}">Log In</a></li>
+							<li sec:authorize="${isAuthenticated()}"><a href="#" th:href="@{/logout}">Log Out</a></li>
+							<li sec:authorize="${!isAuthenticated()}"><a href="#" th:href="@{/register}">Sign Up</a></li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="header_bottom">
+			<div class="container">
+				<div class="header_bottom-box">
+					<div class="header_bottom_left">
+						<div class="logo">
+							<a href="index.html"><img src="https://localhost:8443/assets/img/logo.png" alt="Site Logo" /></a>
+						</div>
+						<ul class="clock">
+							<i class="clock_icon"> </i>
+							<li class="clock_desc">Justo 24/h</li>
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+					<div class="header_bottom_right">
+						<div class="search">
+							<form action="#" th:action="@{/products}">
+								<input type="text" name="q" value="Search the entire site here..."
+									onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Search the entire site here...';}" />
+								<input type="submit" value="" />
+							</form>
+						</div>
+						<div class="shopping-cart-item">
+							<a href="#" th:href="@{/cart}">Cart <span
+								class="shopping-cart-amunt">Rs.500</span><i
+								class="fa fa-shopping-cart"></i> <span id="cart-item-count"
+								class="shopping-cart-product-count">(0)</span></a>
+						</div>
+						<!--  
+						<ul class="bag">
+							<a href="#"><i class="bag_left"> </i></a>
+							<a href="#"><li class="bag_right"><p>205.00 $</p></li></a>
+							<div class="clearfix"></div>
+						</ul>
+						-->
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mainmenu-area">
+			<div class="menu">
+				<div class="container">
+					<div class="menu_box">
+
+						<ul class="megamenu skyblue">
+
+							<li class="active grid" style="display: inline;"><a
+								class="color2" th:href="@{/}">Home</a></li>
+							<li style="display: inline;"><a class="color4"
+								href="men.html">Electronics</a></li>
+							<li style="display: inline;"><a class="color10" href="#">Fashion
+									Trends <span class="fa  fa-angle-down"></span>
+							</a>
+								<div class="megapanel" style="display: none; opacity: 1;">
+									<div class="row">
+										<div class="col1">
+											<div class="h_nav">
+												<h4>Men</h4>
+												<ul>
+													<li><a href="men.html">Jackets</a></li>
+													<li><a href="men.html">Blazers</a></li>
+													<li><a href="men.html">Suits</a></li>
+													<li><a href="men.html">Trousers</a></li>
+													<li><a href="men.html">Jeans</a></li>
+													<li><a href="men.html">Shirts</a></li>
+													<li><a href="men.html">Sweatshirts &amp; Hoodies</a></li>
+													<li><a href="men.html">Swem Wear</a></li>
+													<li><a href="men.html">Accessories</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col1">
+											<div class="h_nav">
+												<h4>Women</h4>
+												<ul>
+													<li><a href="men.html">Outerwear</a></li>
+													<li><a href="men.html">Dresses</a></li>
+													<li><a href="men.html">Handbags</a></li>
+													<li><a href="men.html">Trousers</a></li>
+													<li><a href="men.html">Jeans</a></li>
+													<li><a href="men.html">T-Shirts</a></li>
+													<li><a href="men.html">Shoes</a></li>
+													<li><a href="men.html">Coats</a></li>
+													<li><a href="men.html">Accessories</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="h_nav">
+												<h4>Trends</h4>
+												<ul>
+													<li class="">
+														<div class="p_left">
+															<img src="/assets/img/t1.jpg" class="img-responsive"
+																alt="" />
+														</div>
+														<div class="p_right">
+															<h4>
+																<a href="#">Denim shirt</a>
+															</h4>
+															<span class="item-cat"><small><a href="#">Jackets</a></small></span>
+															<span class="price">29.99 $</span>
+														</div>
+														<div class="clearfix"></div>
+													</li>
+													<li>
+														<div class="p_left">
+															<img src="/assets/img/t2.jpg" class="img-responsive"
+																alt="" />
+														</div>
+														<div class="p_right">
+															<h4>
+																<a href="#">Denim shirt</a>
+															</h4>
+															<span class="item-cat"><small><a href="#">Jackets</a></small></span>
+															<span class="price">29.99 $</span>
+														</div>
+														<div class="clearfix"></div>
+													</li>
+													<li>
+														<div class="p_left">
+															<img src="/assets/img/t3.jpg" class="img-responsive"
+																alt="" />
+														</div>
+														<div class="p_right">
+															<h4>
+																<a href="#">Denim shirt</a>
+															</h4>
+															<span class="item-cat"><small><a href="#">Jackets</a></small></span>
+															<span class="price">29.99 $</span>
+														</div>
+														<div class="clearfix"></div>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+									</div>
+
+								</div></li>
+							<li style="display: inline;"><a class="color4"
+								href="men.html">Mens</a></li>
+							<li style="display: inline;"><a class="color4"
+								href="men.html">Womens</a></li>
+							<li style="display: inline;"><a class="color4"
+								href="men.html">Kids/Baby</a></li>
+							<li style="display: inline;"><a class="color4"
+								href="men.html">Home &amp; Kitchen</a></li>
+							<li style="display: inline;"><a class="color4"
+								href="men.html">Books</a></li>
+							<li style="display: inline;"><a class="color4"
+								href="men.html">Movies</a></li>
+							<li style="display: inline;"><a class="color4"
+								href="men.html">Travels</a></li>
+							<li style="display: inline;"><a class="color4"
+								href="men.html">Pets</a></li>
+							<li style="display: inline;"><a class="color4"
+								href="men.html">Offers</a></li>
+							<li>
+								<form class="nav-search" action="#" th:action="@{/products}">
+							            <input type="text" name="q" value="Search the entire site here..."
+									onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Search the entire site here...';}" />
+				                        <input type="submit" value="Search"/>
+							    </form>
+							</li>
+						</ul>
+						
+						
+
+						<!-- 
+				<form class="navbar-form navbar-right" action="#" th:action="@{/products}">
+			            <input type="text" name="q" placeholder="Search products..."/>
+                        <input type="submit" value="Search"/>
+			    </form>
+			     -->
+					</div>
+						
+							 
+						 
+				</div>
+			</div>
+		</div>
+	</header>
+
+</body>
+</html>

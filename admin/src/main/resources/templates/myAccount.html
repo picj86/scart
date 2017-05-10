@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	layout:decorator="layout/mainLayout">
+
+<head>
+<title>My Account</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<div class="single-product-area">
+			<div class="zigzag-bottom"></div>
+			<div class="container">
+				<p>User's Name: <b><span class="hidden-xs" sec:authentication="principal.user.name">Profile</span></b></p>
+				<p>Email: <b><span class="hidden-xs" sec:authentication="principal.user.email">Email</span></b></p>
+				
+			</div>
+			<!-- /.box-body -->
+		</div>
+		<!-- /.box -->
+	</div>
+
+</body>
+
+</html>

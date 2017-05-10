@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	layout:decorator="layout/mainLayout">
+
+<head>
+<title>Categories</title>
+</head>
+<body>
+
+	<div layout:fragment="pageHeader">
+		<section class="content-header">
+			<h1>
+				Categories <small>Manage Categories</small>
+			</h1>
+			<ol class="breadcrumb">
+				<li><a href="home"><i class="fa fa-home"></i> Home</a></li>
+				<li class="active"><i class="fa fa-folder-open"></i> Categories</li>
+			</ol>
+		</section>
+
+	</div>
+
+	<div layout:fragment="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-header">
+						<h3 class="box-title">List of Categories</h3>
+
+						<div class="box-tools pull-right">
+
+							<button type="button" class="btn btn-box-tool"
+								data-widget="collapse" data-toggle="tooltip" title="Collapse">
+								<i class="fa fa-minus"></i>
+							</button>
+							<button type="button" class="btn btn-box-tool"
+								data-widget="remove" data-toggle="tooltip" title="Remove">
+								<i class="fa fa-times"></i>
+							</button>
+
+						</div>
+
+					</div>
+
+					<div class="box-body">
+						<div class="box-tools pull-right">
+							<div class="box-tools">
+								<div class="input-group" style="width: 150px;">
+									<a class="btn btn-sm btn-default" th:href="@{/categories/new}"><i
+										class="fa fa-plus-circle"></i> New Category</a>
+								</div>
+							</div>
+						</div>
+
+
+						<table id="cat" class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th style="width: 10px">#</th>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Actions</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="cat,iterStat : ${categories}">
+									<td th:text="${iterStat.count}">1</td>
+									<td th:text="${cat.name}">Category Name</td>
+									<td th:text="${cat.description}">Category Description</td>
+									<td><a th:href="@{/categories/{id}(id=${cat.id})}"
+										class="btn btn-sm btn-default"><i class="fa fa-edit"></i>
+											Edit</a> &nbsp; 
+									<a th:href="@{/categories/{id}(id=${cat.id})}"
+										class="btn btn-sm btn-default"><i class="fa fa-trash"></i>
+											Delete</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- /.box-body -->
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

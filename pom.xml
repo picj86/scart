@@ -26,6 +26,8 @@
 	
 	<modules>
 		<module>core</module>
+		<module>admin</module>
+		<module>site</module>
 	</modules>
 
 	<!-- <modules>
@@ -57,7 +59,7 @@
 				<groupId>com.scart</groupId>
 				<artifactId>core</artifactId>
 				<version>${project.version}</version>
-			</dependency>
+			</dependency> 
 		</dependencies>
 	</dependencyManagement>
 	

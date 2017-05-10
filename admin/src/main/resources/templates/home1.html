@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	layout:decorator="layout/adminLayout">
+
+<head>
+<title>Home</title>
+
+</head>
+<body>
+	<div layout:fragment="pageHeader">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">User, <span
+				th:text="${authenticatedUser.user.name}">User</span>!
+			</li>
+
+			<!-- Breadcrumb Menu-->
+			<li class="breadcrumb-item">
+				Administration Dashboard <small>Manage Site Content</small>
+			</li>
+		</ol>
+	</div>
+	
+	<div layout:fragment="content">
+		
+	</div>
+
+</body>
+
+</html>

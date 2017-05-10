@@ -1,0 +1,491 @@
+.header_top {
+	background: #000;
+}
+
+.header-top-left {
+	width: 54.5%;
+	float: left;
+	margin-top: 5px;
+}
+
+.box {
+	float: left;
+	width: 20.5%;
+	margin-right: 10.6%;
+}
+
+.box1 {
+	float: right;
+	width: 40.5%;
+}
+
+.cssmenu ul {
+	float: right;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.cssmenu ul li {
+	display: inline-block;
+}
+
+.cssmenu ul li a {
+	color: #fff;
+	display: block;
+	margin: 10px;
+	font-size: 0.8125em;
+}
+
+.cssmenu li>a:hover {
+	color: #ACEAFA;
+	text-decoration: none;
+}
+/* PREFIXED CSS */
+.dropdown, .dropdown div, .dropdown li, .dropdown div::after, .dropdown .carat,
+	.dropdown .carat:after, .dropdown .selected::after, .dropdown:after {
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
+.dropdown .selected::after, .dropdown.scrollable div::after {
+	-webkit-pointer-events: none;
+	-moz-pointer-events: none;
+	-ms-pointer-events: none;
+	pointer-events: none;
+}
+/* WRAPPER */
+.dropdown {
+	position: relative;
+	width: 80px;
+	cursor: pointer;
+	font-weight: 200;
+	background: none;
+	padding: 8px 15px 5px;
+	color: #fff;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.dropdown.open {
+	z-index: 2;
+}
+
+.dropdown:hover, .dropdown.focus {
+	/*--background:#F7F7F7;--*/
+	
+}
+/* CARAT */
+.dropdown .carat, .dropdown .carat:after {
+	position: absolute;
+	right: -1px;
+	top: 50%;
+	margin-top: 0px;
+	border: 4px solid transparent;
+	border-top: 4px solid #c1c1c1;
+	z-index: 1;
+	-webkit-transform-origin: 50% 20%;
+	-moz-transform-origin: 50% 20%;
+	-ms-transform-origin: 50% 20%;
+	transform-origin: 50% 20%;
+}
+
+.dropdown:hover .carat:after {
+	border-top-color: #f4f4f4;
+}
+
+.dropdown.focus .carat {
+	border-top-color: #f8f8f8;
+}
+
+.dropdown.focus .carat:after {
+	border-top-color: #0180d1;
+}
+
+.dropdown.open .carat {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+/* OLD SELECT (HIDDEN) */
+.dropdown .old {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+.dropdown select {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.dropdown.touch select {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+/* SELECTED FEEDBACK ITEM */
+.dropdown .selected, .dropdown li {
+	display: block;
+	font-size: 11px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.dropdown .selected::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 60px;
+}
+/* DROP DOWN WRAPPER */
+.dropdown div {
+	position: absolute;
+	height: 0;
+	left: 13px;
+	right: 0;
+	top: 35px;
+	background: #fb4d01;
+	overflow: hidden;
+	opacity: 0;
+	color: #fff;
+	width: 90px;
+}
+
+.dropdown:hover div {
+	background: #4CB1CA;
+}
+/* Height is adjusted by JS on open */
+.dropdown.open div {
+	opacity: 1;
+	z-index: 2;
+}
+/* FADE OVERLAY FOR SCROLLING LISTS */
+.dropdown.scrollable div::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+}
+
+.dropdown.scrollable.bottom div::after {
+	opacity: 0;
+}
+/* DROP DOWN LIST */
+.dropdown ul {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+	background: #fd926d;
+}
+
+.dropdown.scrollable.open ul {
+	overflow-y: auto;
+}
+/* DROP DOWN LIST ITEMS */
+.dropdown li {
+	list-style: none;
+	padding: 8px;
+	border-bottom: 1px solid #ee4a02;
+}
+
+.dropdown li:last-child {
+	border-bottom: 0;
+}
+/* .focus class is also added on hover */
+.dropdown li.focus {
+	background: #dd6b44;
+	position: relative;
+	z-index: 3;
+	color: #fff;
+}
+
+.dropdown li.active {
+	background: #ee4a02;
+	color: #fff;
+}
+
+.header_bottom {
+	padding: 2em 0 4em;
+}
+
+.header_bottom-box, .menu_box, .header_top-box, .sellers_grid {
+	padding: 0 15px;
+}
+
+.header_bottom_left {
+	width: 40%;
+	float: left;
+}
+
+.logo {
+	width: 50%;
+	float: left;
+	margin-right: 25%;
+}
+
+ul.clock {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: left;
+	width: 25%;
+	margin-top: 8px;
+}
+
+i.clock_icon {
+	width: 30px;
+	height: 30px;
+	background: url(img/img-sprite.png) no-repeat -2px -3px;
+	float: left;
+}
+
+ul.clock li.clock_desc {
+	color: #100802;
+	font: 400 13px/13px 'Raleway', sans-serif;
+	overflow: hidden;
+	margin-top: 8px;
+}
+
+.header_bottom_right {
+	width: 60%;
+	float: right;
+}
+
+.search {
+	float: left;
+	width: 70%;
+	margin-right: 6%;
+}
+
+.search input[type="text"] {
+	padding: 15px;
+	outline: none;
+	color: #B6B2AE;
+	background: #fff;
+	border: 1px solid #f8d5d1;
+	width: 85%;
+	line-height: 1.5em;
+	font: 500 13px/13px 'Raleway', sans-serif;
+	-webkit-appearance: none;
+}
+
+.search input[type="submit"] {
+	background: url('img/search.png') no-repeat 24px 10px #e05b5b;
+	padding: 12.5px 38px;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	outline: none;
+}
+
+.search input[type="submit"]:hover {
+	background: url('img/search.png') no-repeat 24px 10px #1bccf7;
+}
+
+ul.bag {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+	float: left;
+	width: 24%;
+}
+
+ul.bag a:hover {
+	text-decoration: none;
+}
+
+ul.bag a:hover li p {
+	color: #11ccf7;
+}
+
+i.bag_left {
+	width: 80px;
+	height: 46px;
+	background: url(img/img-sprite.png) no-repeat -32px 3px #e05b5b;
+	float: left;
+	border-right: 1px solid #fff;
+}
+
+ul.bag li.bag_right {
+	background: #e05b5b;
+	padding: 16px 10px;
+	overflow: hidden;
+}
+
+ul.bag li.bag_right p {
+	font: 500 14px/14px 'Raleway', sans-serif;
+	color: #fff;
+}
+
+.menu {
+	border-bottom: 3px solid #e05b5b;
+}
+
+.h_nav ul li a {
+	display: block;
+	font-size: 0.85em;
+	color: #555;
+	text-transform: capitalize;
+	line-height: 1.8em;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	line-height: 2.5em;
+}
+
+.h_nav ul li a:hover {
+	text-decoration: none;
+	color: #f84545;
+}
+
+.h_nav h4 {
+	font-size: 1em;
+	color: #000;
+	line-height: 1.8em;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+}
+
+.p_left {
+	float: left;
+	margin-right: 1em;
+	padding-bottom: 2em;
+}
+
+.p_right {
+	float: left;
+}
+
+.p_right h4 {
+	margin-bottom: -10px;
+}
+
+.p_right h4 a:hover, .small:hover {
+	text-decoration: none;
+	color: #f84545;
+}
+
+span.price {
+	color: #f84545;
+}
+
+span.item-cat {
+	color: #999;
+}
+
+span.item-cat:hover {
+	color: #f84545;
+}
+
+
+a {
+ /*   color: #e05b5b; */
+    text-decoration: none !important;
+}
+
+
+.shopping-cart-item {
+	border: 1px solid #f8d5d1;
+	float: right;
+	font-size: 18px;
+	padding: 8px;
+	position: relative;
+}
+
+.shopping-cart-item:hover .shopping-cart-amunt {
+ /*	color: #fff; */
+}
+.shopping-cart-product-count {
+	background: none repeat scroll 0 0 #e05b5b;
+	border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	font-size: 10px;
+	height: 20px;
+	padding-top: 2px;
+	position: absolute;
+	right: -10px;
+	text-align: center;
+	top: -10px;
+	width: 20px;
+}
+
+.nav-search {
+    position: relative;
+   /* background: #f3f4f5; */
+    float: right;
+    width: 20%;
+    border-radius: 3px;
+}
+
+.nav-search input[type="submit"] {
+    background: url(img/search1.png) no-repeat 0px 1px;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    outline: none;
+    position: absolute;
+    height: 24px;
+    top: 3px;
+    right: -5px;
+}
+
+.nav-search input[type="text"] {
+    margin: 0px 0;
+    padding: 6px 10px 6px 15px;
+    outline: none;
+    color: #5a5a5a;
+    background: none;
+    border: none;
+    width: 89.33333%;
+    position: relative;
+    font-size: 0.9em;
+    -webkit-appearance: none;
+    
+}
+
+.block .box-actions {
+    margin-top: 5px;
+}
+.box{
+/*	display:inline-block; */
+} 
+.box-information{
+	clear: left;
+    float: left;
+}
+.box-title{
+	display: inline-block;
+    margin: 0 0 10px;
+}
+.box-content{
+	font-size: 1.6rem;
+}
+.box-newsletter{
+	float: right;
+}
+

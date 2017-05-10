@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	layout:decorator="layout/siteLayout">
+
+<head>
+<title>My Account</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<div class="single-product-area">
+			<div class="zigzag-bottom"></div>
+			<div class="container">
+				<div class="row">
+
+
+					<div role="tabpanel">
+
+						<div class="col-md-2">
+							<div class="customer-tab" role="tabdashboard">
+								<a href="#dashboard" aria-controls="dashboard" role="tab"
+									data-toggle="tab">Account Dashboard</a>
+							</div>
+							<div class="customer-tab" role="tablist">
+								<a href="#profile" aria-controls="profile" role="tab"
+									data-toggle="tab">Account Information</a>
+							</div>
+
+							<div class="customer-tab" role="presentation">
+								<a href="#orders" aria-controls="orders" role="tab"
+									data-toggle="tab">Orders</a>
+							</div>
+
+
+						</div>
+						<div class="col-md-10">
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane fade in active"
+									id="dashboard">
+
+
+									<h1>Dashboard</h1>
+									<h2>Account Information</h2>
+									<hr />
+									<div class="col-md-4">
+										<h3>Contact Information</h3>
+
+										<div class="box-information">
+											<div >
+												<strong class="box-title"> <span>Contact
+														Information</span>
+												</strong>
+												<div class="box-content">
+													<form role="form" action="#" th:object="${customer}"
+														method="post">
+														<label>FirstName</label> <input type="text"
+															class="form-control" th:field="*{firstName}"
+															readonly="readonly" /> <label>LastName</label> <input
+															type="text" class="form-control" th:field="*{lastName}"
+															readonly="readonly" /> <input type="email"
+															th:field="*{email}" readonly="readonly" />
+													</form>
+
+												</div>
+											</div>
+										</div>
+										<div class="clear"></div>
+										<h2>Address Book</h2> <hr />
+									</div>
+									<div class="col-md-8">
+										<h3>Newsletters</h3>
+										<div class="box-information">
+											You are not subscribed.
+										</div>
+									</div>
+									
+									
+									
+									
+									
+
+								</div>
+
+								<div role="tabpanel" class="tab-pane fade" id="profile">
+									<h2>Customer Info</h2>
+									<form role="form" action="#" th:object="${customer}"
+										method="post">
+										<!-- text input -->
+										<div class="form-group">
+											<label>FirstName</label> <input type="text"
+												class="form-control" th:field="*{firstName}"
+												readonly="readonly" />
+										</div>
+
+										<div class="form-group">
+											<label>LastName</label> <input type="text"
+												class="form-control" th:field="*{lastName}"
+												readonly="readonly" />
+										</div>
+
+										<div class="form-group">
+											<label>Email</label> <input type="email" class="form-control"
+												th:field="*{email}" readonly="readonly" />
+										</div>
+
+										<div class="form-group">
+											<label>Phone</label> <input type="text" class="form-control"
+												th:field="*{phone}" readonly="readonly" />
+										</div>
+
+
+									</form>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="orders">
+									<h2>Orders</h2>
+									<table cellspacing="0" class="shop_table cart">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Order Number</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr th:each="order,iterStat : ${orders}">
+												<td><span th:text="${iterStat.count}">1</span></td>
+												<td><a href="#" th:text="${order.orderNumber}"
+													th:href="@{/orders/{orderNumber}(orderNumber=${order.orderNumber})}">OrderNumber</a>
+												</td>
+												<td><span th:text="${order.status}">Status</span></td>
+
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- /.box-body -->
+		</div>
+		<!-- /.box -->
+	</div>
+
+</body>
+
+</html>
