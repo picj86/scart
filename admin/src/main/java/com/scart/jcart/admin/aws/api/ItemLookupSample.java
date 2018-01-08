@@ -28,19 +28,19 @@ public class ItemLookupSample {
 	/*
 	 * Your AWS Access Key ID, as taken from the AWS Your Account page.
 	 */
-	private static final String AWS_ACCESS_KEY_ID = "AKIAIWVF2JDZHMUJ7J3Q";
+	private static final String AWS_ACCESS_KEY_ID = "XXX";
 
 	/*
 	 * Your AWS Secret Key corresponding to the above ID, as taken from the AWS
 	 * Your Account page.
 	 */
-	private static final String AWS_SECRET_KEY = "az+KaJpNIUqnxuqLvNdRyta+UWNd9YoNBw6B8gda";
+	private static final String AWS_SECRET_KEY = "XXX";
 	
 	/*
 	 * Your Associate Tag key
 	 */
 	
-	private static final String AWS_ASSOCIATE_TAG_KEY = "shepkartcom-21";
+	private static final String AWS_ASSOCIATE_TAG_KEY = "XXX";
 	/*
 	 * Use one of the following end-points, according to the region you are
 	 * interested in:
