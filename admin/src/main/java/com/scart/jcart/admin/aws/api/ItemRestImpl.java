@@ -62,7 +62,7 @@ public class ItemRestImpl implements ItemRest {
 	
 	public void init(){
 		try {
-			signedRequestsHelper = SignedRequestsHelper.getInstance("ecs.amazonaws.in", "AKIAIWVF2JDZHMUJ7J3Q", "az+KaJpNIUqnxuqLvNdRyta+UWNd9YoNBw6B8gda", "shepkartcom-21");
+			signedRequestsHelper = SignedRequestsHelper.getInstance("ecs.amazonaws.in", "XX", "XX", "XX");
 		} catch (InvalidKeyException | IllegalArgumentException | UnsupportedEncodingException
 				| NoSuchAlgorithmException e1) {
 			// TODO Auto-generated catch block
