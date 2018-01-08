@@ -770,3 +770,25 @@ function _init() {
     });
   };
 }(jQuery));
+
+/*
+ * 
+ function updateAdvancedParametersList()
+{
+	$.ajax({
+		type: "GET",
+		url: "amazoncategories_in.xml",
+		dataType: "xml",
+		  success: function(xml) {
+			var select = $('#BrowseNodeSelectBox');
+			select.append('<option value="">Select a Root Category</option>');				
+			$(xml).find('category').each(function(){											
+			var value = $(this).find('value').text();
+			var title = $(this).find('title').text();
+			select.append("<option value='"+ value +"'>"+title+"</option>");
+		  });
+		}
+	});
+}(jQuery));
+
+*/

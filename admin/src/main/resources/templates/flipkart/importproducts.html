@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	layout:decorator="layout/mainLayout">
+
+<head>
+<title>Import Settings</title>
+</head>
+<body>
+
+	<div layout:fragment="pageHeader">
+		<section class="content-header">
+			<h1>
+				Flipkart <small>Import Products</small>
+			</h1>
+			<ol class="breadcrumb">
+				<li><a href="../home"><i class="fa fa-home"></i> Home</a></li>
+				<li class="active"><i class="fa fa-shopping-cart"></i> Import Products</li>
+			</ol>
+		</section>
+		
+	</div>
+
+	<div layout:fragment="content">
+		<div class="row">
+		<form role="form"
+				th:action="@{/flipkart/importproducts}" th:object="${importproducts}"
+							method="post">
+							<!-- <input id="opener" type="submit" value="Submit" /> -->
+							<input  type="submit" value="Submit" onclick="showAmazonDialog()" />
+			<div class="col-xs-12">
+				<!-- Default box -->
+				<div class="box box-primary">
+					<div class="box-header with-border">
+						<h3 class="box-title">Flipkart Search Params</h3>
+
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool"
+								data-widget="collapse" data-toggle="tooltip" title="Collapse">
+								<i class="fa fa-minus"></i>
+							</button>
+							<!-- <button type="button" class="btn btn-box-tool"
+								data-widget="remove" data-toggle="tooltip" title="Remove">
+								<i class="fa fa-times"></i>
+							</button> -->
+						</div>
+					</div>
+
+					<div class="box-body">
+						<div class="col-xs-6">	
+				        	<div id="ajaxLoader" style="display:none"><img th:src="@{../../assets/dist/img/ajax-loader.gif}" alt="loading..."/></div>
+							<div class="form-group">
+				                <label>Product Root Category</label>
+				                <select name="flipkartcategory"  class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+				                  <option selected="selected" value="categorynotselected">Select a Product Category</option>
+				                  <option  th:each="cat: ${categories}" th:value="${cat.value}" th:text="${cat.key}">Category</option>
+				                </select>
+				            </div>
+							<div class="form-group">
+									<label>Keywords</label>
+									<input type="text" name="keywords" class="form-control" placeholder="Enter Keywords to Search"/>
+							</div>
+							<div class="checkbox">
+				                  <label>
+				                    <input name="isAvailable" type="checkbox" /> Only Available Products
+				                  </label>
+				                  <p class="note">Ignored for "All Products" of Root Category</p>
+				                </div>
+							
+						</div>
+					
+					
+						<div class="col-xs-6">
+								<div class="form-group">
+				                  <label>Flipkart Standard Product ID</label>
+				                  <textarea type="text" name="fproductids" class="form-control" placeholder="Use commas to divide multiple values. Note: if it is not empty, other parameters, excluding 'Local', are ignored" rows="6" />
+				                  <p class="note">
+				                 Use commas to divide multiple values. <br /><strong>Note:</strong> if it is not empty, other parameters, excluding 'Local', are ignored
+				                 </p>
+				                </div>
+				                
+								
+						</div>
+					</div>
+				
+				</div>
+			</div>
+			
+			<div class="col-xs-12">
+				<!-- Default box -->
+				<div class="box box-primary">
+					<div class="box-header with-border">
+						<h3 class="box-title">Import Params</h3>
+
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool"
+								data-widget="collapse" data-toggle="tooltip" title="Collapse">
+								<i class="fa fa-minus"></i>
+							</button>
+							<!-- <button type="button" class="btn btn-box-tool"
+								data-widget="remove" data-toggle="tooltip" title="Remove">
+								<i class="fa fa-times"></i>
+							</button> -->
+						</div>
+					</div>
+
+					<div class="box-body">
+						<div class="col-xs-6">	
+							
+							<div class="form-group">
+			                  <div class="radio">
+			                    <label>
+			                      <input type="radio" name="optionsRadios" value="optionsRadiosCreate" checked="true" />
+			                      Create categories on the basis of Flipkart structure
+			                    </label>
+			                  </div>
+			                  <div class="form-group">
+				                <label>Default Root Catalog</label>
+				                <select name="defaultCat" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+				                  <option>Site Root Category</option>
+				                  <option selected="selected">Flipkart Root Category</option>
+				                 </select>
+				             </div>				    
+			                  <div class="radio">
+			                    <label>
+			                      <input type="radio" name="optionsRadios" value="optionsRadiosExisting"  />
+			                      Use existing categories
+			                    </label>
+			                  </div>
+			                </div>
+			                 
+						
+						</div>
+						<div class="col-xs-6">	
+							<div class="form-group">
+				                <label>Default Condition</label>
+				                <select name="defaultCondition" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+				                  <option selected="selected">New</option>
+				                  <option>Used</option>
+				                  <option>Collectible</option>
+				                  <option>Refurbished</option>
+				                 </select>
+				                 <p class="note">Enables you to specify the condition of an desired product</p>
+				            </div>
+				            <div class="form-group">
+				                <label>Default Price</label>
+				                <select name="defaultPrice" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+				                  <option>Lowest Available</option>
+				                  <option selected="selected">Highest Available</option>
+				                 </select>
+				                 <p class="note">Product price selected from prices offered by sellers</p>
+				            </div>
+				           
+				    
+				           
+						
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="col-xs-12">
+				<div class="box box-warning">
+				<div class="box-body">
+				<div class="box-tools pull-right">
+						<div class="box-tools">
+								<div class="input-group" style="width: 450px;">
+									<a class="btn btn-sm btn-default" th:href="@{/amazon/importproducts/{asin}}"><i
+										class="fa fa-plus-circle"></i> Search &amp; Load Products</a>
+									<a class="btn btn-sm btn-default" th:href="@{/categories/new}"><i
+										class="fa fa-plus-circle"></i> Import Loaded Products</a>
+									<a class="btn btn-sm btn-default" th:href="@{/categories/new}"><i
+										class="fa fa-plus-circle"></i> Clear List</a>
+								</div>
+						</div>
+				</div>
+				<table id="cat" class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th style="width: 10px">#</th>
+									<th>SKU</th>
+							<!-- 	<th>Detail Page URL</th>  -->	
+									<th>Title</th>
+									<th>Description</th>
+									<th>MRP</th>
+									<th>Selling Price *</th>
+									<th>Product Url</th>
+									<th >Stock Availability</th>
+									<th>Import Status</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="product,iterStat : ${products}">
+									<td th:text="${iterStat.count}">1</td>
+									<td  th:text="${product.id}">Product ID</td>
+							<!--  		<td th:text="${item.detailPageURL}">DetailPageURL</td> -->
+									<td th:text="${product.title}">Title</td>
+									<td  th:text="${product.description}">Description</td>
+									<td th:text="${product.mrp}">MRP</td>
+									<td th:text="${product.sellingPrice}">Selling Price</td>
+									<td th:text="${product.productUrl}">Product Url</td>
+									<td th:text="${product.inStock}">In Stock</td>
+									<td></td>
+									<td></td>
+								
+								</tr>
+							</tbody>
+				</table>
+				</div>
+				</div>
+			</div>
+			</form>
+		</div>
+		<div id="amazon-popup-window-mask" style="display: none;"></div>
+		<div id="amazon-popup-window" class="message-popup">
+			<div class="message-popup-head">
+				<h2 id="amazon-popup-process-title"></h2>
+			</div>
+			<div class="message-popup-content">
+				<div class="message amazon-message-box">
+					<div class="amazon-load-box" id="amazon-img-loader">
+						<img src="" alt="Processing..." />
+					</div>
+					<div class="amazon-popup-process-info">
+						<p id="amazon-popup-process-message"></p>
+						<p id="amazon-popup-process-error"></p>
+					</div>
+				</div>
+				<div class="amazon-load-stop">
+					<button id="amazon-popup-process-stop-button"
+						onclick="wpStopProcessImportAmazon(); return false;"
+						class="scalable delete" type="button">
+						<span id="amazon-load-stop-message">Stop</span>
+					</button>
+					<button id="amazon-popup-process-finish-button"
+						onclick="setLocation('/amazon/importproducts'); return false;"
+						class="scalable nodisp" type="button">
+						<span>Close</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+		
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <p>Some text in the Modal..</p>
+		  </div>
+		 </div>
+  
+	</div>
+	
+	<script th:inline="javascript">
+		function showAmazonDialog(){
+			
+			BootstrapDialog.show({
+				type: BootstrapDialog.TYPE_PRIMARY,
+				title: 'Search and Load Products',
+				message: 'Loading...',
+				draggable: true,
+				buttons: [{
+					label:'Close',
+					cssClass:'btn-info',
+					action: function(dialogItself){
+						
+						dialogIteself.close();
+					}
+				}]
+			
+			});
+			
+			
+		}
+	
+	</script>
+	
+</body>
+</html>
