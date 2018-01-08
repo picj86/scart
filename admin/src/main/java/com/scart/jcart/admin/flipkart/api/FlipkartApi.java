@@ -10,8 +10,8 @@ import com.jayway.jsonpath.internal.path.ArrayPathToken;
 public class FlipkartApi {
 
 	private DataParser parser;
-	private String affiliateId = "pkjha78ho";
-	private String affiliateToken = "c3ae4b8ef76e43e1b77b8c1d40511fae";
+	private String affiliateId = "XXX";
+	private String affiliateToken = "XXX";
 	private String downloadType = "JSON";
 
 	public FlipkartApi() {	}
