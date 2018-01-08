@@ -1,0 +1,399 @@
+<?xml version="1.0" ?>
+<ItemLookupResponse
+	xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+	<OperationRequest>
+		<HTTPHeaders>
+			<Header Name="UserAgent"
+				Value="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36"></Header>
+		</HTTPHeaders>
+		<RequestId>3df92929-55a5-43e9-a742-c43de8975c4f</RequestId>
+		<Arguments>
+			<Argument Name="AWSAccessKeyId" Value="AKIAIWVF2JDZHMUJ7J3Q"></Argument>
+			<Argument Name="AssociateTag" Value="shepkartcom-21"></Argument>
+			<Argument Name="IdType" Value="ASIN"></Argument>
+			<Argument Name="ItemId" Value="B01M3QMXTU"></Argument>
+			<Argument Name="Operation" Value="ItemLookup"></Argument>
+			<Argument Name="ResponseGroup" Value="Images,ItemAttributes,Offers"></Argument>
+			<Argument Name="Service" Value="AWSECommerceService"></Argument>
+			<Argument Name="Timestamp" Value="2017-05-14T11:19:44.000Z"></Argument>
+			<Argument Name="Signature"
+				Value="XaEqgzPwHkp4Bkx5ULM6GAN7J/qAynlRxTWXn68eE+A="></Argument>
+		</Arguments>
+		<RequestProcessingTime>0.0595062010000000</RequestProcessingTime>
+	</OperationRequest>
+	<Items>
+		<Request>
+			<IsValid>True</IsValid>
+			<ItemLookupRequest>
+				<IdType>ASIN</IdType>
+				<ItemId>B01M3QMXTU</ItemId>
+				<ResponseGroup>Images</ResponseGroup>
+				<ResponseGroup>ItemAttributes</ResponseGroup>
+				<ResponseGroup>Offers</ResponseGroup>
+				<VariationPage>All</VariationPage>
+			</ItemLookupRequest>
+		</Request>
+		<Item>
+			<ASIN>B01M3QMXTU</ASIN>
+			<ParentASIN>B01M7QETAI</ParentASIN>
+			<DetailPageURL>https://www.amazon.in/Mayra-Womens-Partywear-Net-A15T020844_XL/dp/B01M3QMXTU?psc=1&SubscriptionId=AKIAIWVF2JDZHMUJ7J3Q&tag=shepkartcom-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B01M3QMXTU
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>https://www.amazon.in/gp/registry/wishlist/add-item.html?asin.0=B01M3QMXTU&SubscriptionId=AKIAIWVF2JDZHMUJ7J3Q&tag=shepkartcom-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B01M3QMXTU
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>https://www.amazon.in/gp/pdp/taf/B01M3QMXTU?SubscriptionId=AKIAIWVF2JDZHMUJ7J3Q&tag=shepkartcom-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B01M3QMXTU
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>https://www.amazon.in/review/product/B01M3QMXTU?SubscriptionId=AKIAIWVF2JDZHMUJ7J3Q&tag=shepkartcom-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B01M3QMXTU
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>https://www.amazon.in/gp/offer-listing/B01M3QMXTU?SubscriptionId=AKIAIWVF2JDZHMUJ7J3Q&tag=shepkartcom-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B01M3QMXTU
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<SmallImage>
+				<URL>https://images-eu.ssl-images-amazon.com/images/I/51YdlzO0UYL._SL75_.jpg
+				</URL>
+				<Height Units="pixels">75</Height>
+				<Width Units="pixels">50</Width>
+			</SmallImage>
+			<MediumImage>
+				<URL>https://images-eu.ssl-images-amazon.com/images/I/51YdlzO0UYL._SL160_.jpg
+				</URL>
+				<Height Units="pixels">160</Height>
+				<Width Units="pixels">107</Width>
+			</MediumImage>
+			<LargeImage>
+				<URL>https://images-eu.ssl-images-amazon.com/images/I/51YdlzO0UYL.jpg
+				</URL>
+				<Height Units="pixels">500</Height>
+				<Width Units="pixels">333</Width>
+			</LargeImage>
+			<ImageSets>
+				<ImageSet Category="variant">
+					<SwatchImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/31TMDJsykKL._SL30_.jpg
+						</URL>
+						<Height Units="pixels">30</Height>
+						<Width Units="pixels">20</Width>
+					</SwatchImage>
+					<SmallImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/31TMDJsykKL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">50</Width>
+					</SmallImage>
+					<ThumbnailImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/31TMDJsykKL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">50</Width>
+					</ThumbnailImage>
+					<TinyImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/31TMDJsykKL._SL110_.jpg
+						</URL>
+						<Height Units="pixels">110</Height>
+						<Width Units="pixels">73</Width>
+					</TinyImage>
+					<MediumImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/31TMDJsykKL._SL160_.jpg
+						</URL>
+						<Height Units="pixels">160</Height>
+						<Width Units="pixels">107</Width>
+					</MediumImage>
+					<LargeImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/31TMDJsykKL.jpg
+						</URL>
+						<Height Units="pixels">500</Height>
+						<Width Units="pixels">333</Width>
+					</LargeImage>
+				</ImageSet>
+				<ImageSet Category="variant">
+					<SwatchImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51-Ic8AZdgL._SL30_.jpg
+						</URL>
+						<Height Units="pixels">30</Height>
+						<Width Units="pixels">20</Width>
+					</SwatchImage>
+					<SmallImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51-Ic8AZdgL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">50</Width>
+					</SmallImage>
+					<ThumbnailImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51-Ic8AZdgL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">50</Width>
+					</ThumbnailImage>
+					<TinyImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51-Ic8AZdgL._SL110_.jpg
+						</URL>
+						<Height Units="pixels">110</Height>
+						<Width Units="pixels">73</Width>
+					</TinyImage>
+					<MediumImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51-Ic8AZdgL._SL160_.jpg
+						</URL>
+						<Height Units="pixels">160</Height>
+						<Width Units="pixels">107</Width>
+					</MediumImage>
+					<LargeImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51-Ic8AZdgL.jpg
+						</URL>
+						<Height Units="pixels">500</Height>
+						<Width Units="pixels">333</Width>
+					</LargeImage>
+				</ImageSet>
+				<ImageSet Category="variant">
+					<SwatchImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/41uucFI86vL._SL30_.jpg
+						</URL>
+						<Height Units="pixels">30</Height>
+						<Width Units="pixels">20</Width>
+					</SwatchImage>
+					<SmallImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/41uucFI86vL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">50</Width>
+					</SmallImage>
+					<ThumbnailImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/41uucFI86vL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">50</Width>
+					</ThumbnailImage>
+					<TinyImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/41uucFI86vL._SL110_.jpg
+						</URL>
+						<Height Units="pixels">110</Height>
+						<Width Units="pixels">73</Width>
+					</TinyImage>
+					<MediumImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/41uucFI86vL._SL160_.jpg
+						</URL>
+						<Height Units="pixels">160</Height>
+						<Width Units="pixels">107</Width>
+					</MediumImage>
+					<LargeImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/41uucFI86vL.jpg
+						</URL>
+						<Height Units="pixels">500</Height>
+						<Width Units="pixels">333</Width>
+					</LargeImage>
+				</ImageSet>
+				<ImageSet Category="variant">
+					<SwatchImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51aLncW9nJL._SL30_.jpg
+						</URL>
+						<Height Units="pixels">30</Height>
+						<Width Units="pixels">22</Width>
+					</SwatchImage>
+					<SmallImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51aLncW9nJL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">55</Width>
+					</SmallImage>
+					<ThumbnailImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51aLncW9nJL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">55</Width>
+					</ThumbnailImage>
+					<TinyImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51aLncW9nJL._SL110_.jpg
+						</URL>
+						<Height Units="pixels">110</Height>
+						<Width Units="pixels">81</Width>
+					</TinyImage>
+					<MediumImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51aLncW9nJL._SL160_.jpg
+						</URL>
+						<Height Units="pixels">160</Height>
+						<Width Units="pixels">117</Width>
+					</MediumImage>
+					<LargeImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51aLncW9nJL.jpg
+						</URL>
+						<Height Units="pixels">500</Height>
+						<Width Units="pixels">366</Width>
+					</LargeImage>
+				</ImageSet>
+				<ImageSet Category="variant">
+					<SwatchImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/61mXUS36xAL._SL30_.jpg
+						</URL>
+						<Height Units="pixels">30</Height>
+						<Width Units="pixels">22</Width>
+					</SwatchImage>
+					<SmallImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/61mXUS36xAL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">55</Width>
+					</SmallImage>
+					<ThumbnailImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/61mXUS36xAL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">55</Width>
+					</ThumbnailImage>
+					<TinyImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/61mXUS36xAL._SL110_.jpg
+						</URL>
+						<Height Units="pixels">110</Height>
+						<Width Units="pixels">81</Width>
+					</TinyImage>
+					<MediumImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/61mXUS36xAL._SL160_.jpg
+						</URL>
+						<Height Units="pixels">160</Height>
+						<Width Units="pixels">117</Width>
+					</MediumImage>
+					<LargeImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/61mXUS36xAL.jpg
+						</URL>
+						<Height Units="pixels">500</Height>
+						<Width Units="pixels">366</Width>
+					</LargeImage>
+				</ImageSet>
+				<ImageSet Category="primary">
+					<SwatchImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51YdlzO0UYL._SL30_.jpg
+						</URL>
+						<Height Units="pixels">30</Height>
+						<Width Units="pixels">20</Width>
+					</SwatchImage>
+					<SmallImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51YdlzO0UYL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">50</Width>
+					</SmallImage>
+					<ThumbnailImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51YdlzO0UYL._SL75_.jpg
+						</URL>
+						<Height Units="pixels">75</Height>
+						<Width Units="pixels">50</Width>
+					</ThumbnailImage>
+					<TinyImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51YdlzO0UYL._SL110_.jpg
+						</URL>
+						<Height Units="pixels">110</Height>
+						<Width Units="pixels">73</Width>
+					</TinyImage>
+					<MediumImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51YdlzO0UYL._SL160_.jpg
+						</URL>
+						<Height Units="pixels">160</Height>
+						<Width Units="pixels">107</Width>
+					</MediumImage>
+					<LargeImage>
+						<URL>https://images-eu.ssl-images-amazon.com/images/I/51YdlzO0UYL.jpg
+						</URL>
+						<Height Units="pixels">500</Height>
+						<Width Units="pixels">333</Width>
+					</LargeImage>
+				</ImageSet>
+			</ImageSets>
+			<ItemAttributes>
+				<Binding>Apparel</Binding>
+				<Brand>Mayra</Brand>
+				<ClothingSize>X-Large</ClothingSize>
+				<Color>Navy blue</Color>
+				<Department>womens</Department>
+				<Feature>Material: Net ; Color: Blue</Feature>
+				<Feature>Fit Type: Regular Fit</Feature>
+				<Feature>Occasion: Party wear</Feature>
+				<Feature>Wash care instructions: Dry clean</Feature>
+				<ItemDimensions>
+					<Weight Units="hundredths-pounds">22</Weight>
+				</ItemDimensions>
+				<Label>mayra</Label>
+				<ListPrice>
+					<Amount>99500</Amount>
+					<CurrencyCode>INR</CurrencyCode>
+					<FormattedPrice>INR 995.00</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>mayra</Manufacturer>
+				<MPN>A15T020844_XL</MPN>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">39</Height>
+					<Length Units="hundredths-inches">1181</Length>
+					<Weight Units="hundredths-pounds">22</Weight>
+					<Width Units="hundredths-inches">1181</Width>
+				</PackageDimensions>
+				<PartNumber>A15T020844_XL</PartNumber>
+				<ProductGroup>Apparel</ProductGroup>
+				<ProductTypeName>SHIRT</ProductTypeName>
+				<Publisher>mayra</Publisher>
+				<Size>X-Large</Size>
+				<Studio>mayra</Studio>
+				<Title>Mayra Women's Partywear Net Top (A15T020844_XL)</Title>
+			</ItemAttributes>
+			<OfferSummary>
+				<LowestNewPrice>
+					<Amount>34825</Amount>
+					<CurrencyCode>INR</CurrencyCode>
+					<FormattedPrice>INR 348.25</FormattedPrice>
+				</LowestNewPrice>
+				<TotalNew>1</TotalNew>
+				<TotalUsed>0</TotalUsed>
+				<TotalCollectible>0</TotalCollectible>
+				<TotalRefurbished>0</TotalRefurbished>
+			</OfferSummary>
+			<Offers>
+				<TotalOffers>1</TotalOffers>
+				<TotalOfferPages>1</TotalOfferPages>
+				<MoreOffersUrl>https://www.amazon.in/gp/offer-listing/B01M3QMXTU?SubscriptionId=AKIAIWVF2JDZHMUJ7J3Q&tag=shepkartcom-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B01M3QMXTU
+				</MoreOffersUrl>
+				<Offer>
+					<OfferAttributes>
+						<Condition>New</Condition>
+					</OfferAttributes>
+					<OfferListing>
+						<OfferListingId>TOcOsVs8p3oc2SrpCw%2ByLS0%2FzuTmPxHSAQpokuT%2Ffr5FBoF6fW3SH3lrYZ3%2BCaBylzh9zerXvVGFb7h7SRqR94OOP5ENP%2BZB7KgHwfskEQ32XZ2PEEQ7tj50ibevxfpeK%2BHeyN9zlodZyD0on%2BCqkcqkIonoNN%2Bd
+						</OfferListingId>
+						<Price>
+							<Amount>99500</Amount>
+							<CurrencyCode>INR</CurrencyCode>
+							<FormattedPrice>INR 995.00</FormattedPrice>
+						</Price>
+						<SalePrice>
+							<Amount>34825</Amount>
+							<CurrencyCode>INR</CurrencyCode>
+							<FormattedPrice>INR 348.25</FormattedPrice>
+						</SalePrice>
+						<AmountSaved>
+							<Amount>64675</Amount>
+							<CurrencyCode>INR</CurrencyCode>
+							<FormattedPrice>INR 646.75</FormattedPrice>
+						</AmountSaved>
+						<PercentageSaved>65</PercentageSaved>
+						<Availability>Usually dispatched within 24 hours</Availability>
+						<AvailabilityAttributes>
+							<AvailabilityType>now</AvailabilityType>
+							<MinimumHours>0</MinimumHours>
+							<MaximumHours>0</MaximumHours>
+						</AvailabilityAttributes>
+						<IsEligibleForSuperSaverShipping>1
+						</IsEligibleForSuperSaverShipping>
+						<IsEligibleForPrime>1</IsEligibleForPrime>
+					</OfferListing>
+				</Offer>
+			</Offers>
+		</Item>
+	</Items>
+</ItemLookupResponse>
